@@ -1,0 +1,36 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Production build
+dist/
+build/
+lib/
+
+# Development folders
+scripts/
+examples/
+tests/
+
+# Coverage reports
+coverage/
+
+# IDE files
+.idea/
+.vscode/
+*.sublime-*
+*.swp
+.DS_Store
+
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
