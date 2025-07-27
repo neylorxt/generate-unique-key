@@ -5,21 +5,27 @@ A simple and flexible unique key generator for JavaScript/TypeScript projects.
 ### Installation
 
 ```bash
+# Using npm
 npm install @neylorxt/generate-unique-key
 
-# Migration from old version
-npm uninstall @neylorxt/react-api
-npm install @neylorxt/react-request@latest
-
-
-# or
-
-
+# Using yarn
 yarn add @neylorxt/generate-unique-key
 
-# Migration from old version
-yarn remove @neylorxt/react-api
-yarn add @neylorxt/react-request@latest
+# Using pnpm
+pnpm add @neylorxt/generate-unique-key
+```
+
+### Updating
+
+```bash
+# Using npm
+npm update @neylorxt/generate-unique-key
+
+# Using yarn
+yarn upgrade @neylorxt/generate-unique-key
+
+# Using pnpm
+pnpm update @neylorxt/generate-unique-key
 ```
 
 ### Base Types
