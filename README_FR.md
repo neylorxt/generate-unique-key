@@ -5,21 +5,27 @@ Un générateur de clés uniques simple et flexible pour vos projets JavaScript/
 ### Installation
 
 ```bash
+# Avec npm
 npm install @neylorxt/generate-unique-key
 
-# Migration depuis l'ancienne version
-npm uninstall @neylorxt/react-api
-npm install @neylorxt/react-request@latest
-
-
-# ou
-
-
+# Avec yarn
 yarn add @neylorxt/generate-unique-key
 
-# Migration depuis l'ancienne version
-yarn remove @neylorxt/react-api
-yarn add @neylorxt/react-request@latest
+# Avec pnpm
+pnpm add @neylorxt/generate-unique-key
+```
+
+### Mise à jour
+
+```bash
+# Avec npm
+npm update @neylorxt/generate-unique-key
+
+# Avec yarn
+yarn upgrade @neylorxt/generate-unique-key
+
+# Avec pnpm
+pnpm update @neylorxt/generate-unique-key
 ```
 
 ### Types de Base
@@ -55,7 +61,7 @@ interface GenerateKeyOptions {
 #### Intervalle de Séparation (`separatorInterval`)
 - Valeur par défaut : 4
 - Description : Nombre de caractères entre chaque séparateur
-- Exemple : Avec interval=4, "AAAA-BBBB-CCCC"
+- Exemple : Avec intervalle=4, "AAAA-BBBB-CCCC"
 
 ### Fonctionnalités Détaillées avec Exemples
 
@@ -85,10 +91,10 @@ const keyWithDots = generateKey({
 
 #### 2. generateNumericKey - Clés Numériques
 ```typescript
-// Paramètres:
-// - length: nombre de chiffres (défaut: 8)
-// - separator: caractère séparateur (défaut: '-')
-// - separatorInterval: taille des groupes (défaut: 4)
+// Paramètres :
+// - length : nombre de chiffres (défaut : 8)
+// - separator : caractère séparateur (défaut : '-')
+// - separatorInterval : taille des groupes (défaut : 4)
 
 // Clé numérique simple
 const numKey = generateNumericKey();
@@ -118,8 +124,8 @@ const customAlphaKey = generateAlphaKey(12, '_', 6);
 
 #### 4. generateUUID - Format UUID Simplifié
 ```typescript
-// Paramètre:
-// - type: type de caractères à utiliser (défaut: 'default')
+// Paramètre :
+// - type : type de caractères à utiliser (défaut : 'default')
 
 const uuid = generateUUID();
 // => 'a1B2-c3D4-e5F6-g7H8'
@@ -133,8 +139,8 @@ const letterUuid = generateUUID('letter');
 
 #### 5. generateShortKey - Clés Courtes
 ```typescript
-// Paramètre:
-// - type: type de caractères (défaut: 'default')
+// Paramètre :
+// - type : type de caractères (défaut : 'default')
 // Génère toujours une clé de 4 caractères
 
 const shortKey = generateShortKey();
@@ -146,10 +152,10 @@ const numericShort = generateShortKey('number');
 
 #### 6. generateCustomKey - Clés avec Préfixe/Suffixe
 ```typescript
-// Paramètres:
-// - prefix: texte à ajouter au début
-// - suffix: texte à ajouter à la fin
-// - options: options de génération standards
+// Paramètres :
+// - prefix : texte à ajouter au début
+// - suffix : texte à ajouter à la fin
+// - options : options de génération standards
 
 // Exemple avec préfixe et suffixe
 const userKey = generateCustomKey('USER-', '-2023', {
@@ -168,9 +174,9 @@ const orderId = generateCustomKey('ORD-', '', {
 
 #### 7. validateKey - Validation de Clés
 ```typescript
-// Paramètres:
-// - key: la clé à valider
-// - type: le type attendu (optionnel)
+// Paramètres :
+// - key : la clé à valider
+// - type : le type attendu (optionnel)
 
 // Validation simple
 validateKey('A1b2-C3d4');  // true
